@@ -1,0 +1,11 @@
+.container{
+    width: 20%;
+    margin-left: 40%;
+    background-color: grey;
+}
+input{
+    float: right;
+}
+#password{
+    margin-top: -5%;
+}
