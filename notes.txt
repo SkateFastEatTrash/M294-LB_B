@@ -1,0 +1,65 @@
+const createCell = (cellText) => {
+    const cell = document.createElement("td");
+    cell.innerText = cellText;
+    return cell
+}
+
+const add_pokemon = (pokemon) => {
+    const display = document.getElementById("display");
+    const tablerow = document.createElement("tr");
+
+    tablerow.append(
+        createCell(pokemon.id),
+        createCell(pokemon.name),
+        createCell(pokemon.weight),
+        createCell(pokemon.height)
+    )
+
+    display.appendChild(tablerow)
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const pokemonForm = document.getElementById("pokemonForm");
+
+    pokemonForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const pokemonFormData = new FormData(pokemonForm);
+
+        fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonFormData.get("id")}/`)
+            .then((response) => {
+                if(response.status === 404) {
+                    alert("pokemon not found")
+                }
+                return response.json();
+            })
+            .then((data) => {
+                add_pokemon(data)
+            })
+    });
+});
+
+
+let zipData;
+
+fetch("./zipcodes.ch.json")
+.then ((response) => {
+    return response.json();
+})
+.then((data) => {
+    zipData = data;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const zipInput = document.getElementById("plz");
+    const placeInput = document.getElementById("place");
+    const cantonInput = document.getElementById("cantonInput");
+
+    zipInput.addEventListener("blur", () => {
+        if(zipData) {
+            const zipEntrie = zipData.find((entrie) => entrie.zipcode == zipInput.value);
+            placeInput.value= zipEntrie.place;
+            cantonInput.value = zipEntrie.state_code;
+        }
+    });
+});
