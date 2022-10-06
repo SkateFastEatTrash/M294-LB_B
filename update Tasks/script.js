@@ -20,6 +20,7 @@ function updateTask () {
     
 document.addEventListener("DOMContentLoaded", () => {
     const inputForm = document.getElementById("input");
+    const _idInput = document.getElementById("id");
     const todoInput = document.getElementById("todo");
     const status = document.getElementById("status");
 
@@ -27,12 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
         const inputFormData = new FormData(inputForm);
 
-        fetch(`http://localhost:3000/task/${inputFormData.get("id")}`,{
+        fetch(`http://localhost:3000/tasks`, {
             method:'PUT',
             headers: {
                 'Content-Type' : 'application/json'
             },
             body: JSON.stringify({
+                id: _idInput.value,
                 title: todoInput.value,
                 completed : status.value
             })
@@ -43,6 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data) => {
             renderTask(data)
         })
+        alert(_idInput.value);
+        alert(todoInput.value);
+        alert(status.value);
     });
 
 });
