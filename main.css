@@ -3,3 +3,10 @@
     margin-left: 10%;
     background-color: grey;
 }
+table{
+    width: 100%;
+}
+
+th{
+    width: 33%;
+}
