@@ -14,8 +14,7 @@ const renderTask = (task) =>  {
     tableBody.appendChild(tableRow);
     
 }
-    
-document.addEventListener("DOMContentLoaded", () => {
+function deleteTask () {
     const inputForm = document.getElementById("input");
 
     inputForm.addEventListener("submit", (event) => {
@@ -35,4 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 renderTask(data)
             })
     });
+}
+    
+document.addEventListener("DOMContentLoaded", () => {
+    deleteTask();
 });
