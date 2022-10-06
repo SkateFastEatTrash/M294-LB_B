@@ -14,19 +14,30 @@ const renderTask = (task) =>  {
     tableBody.appendChild(tableRow);
     
 }
-function updateTask () {
+const renderTaskForIndex = (task) =>  {    
 
-}
+    for(let i = 0; i <= task.length - 1; i++) {
+        const tableBody = document.getElementById('display');
+        const tableRow = document.createElement('tr');
+        tableRow.append(createCell(task[i].id)),
+        tableRow.append(createCell(task[i].title)),
+        tableRow.append(createCell(task[i].completed));
+        tableBody.appendChild(tableRow);
+    }
     
-document.addEventListener("DOMContentLoaded", () => {
-    const inputForm = document.getElementById("input");
+    
+}   
+function indexTasks() {
+    fetch('http://localhost:3000/tasks')
+    .then((response) => response.json())
+    .then((data) => renderTaskForIndex(data))
+}
+function updateTask(){
     const _idInput = document.getElementById("id");
     const todoInput = document.getElementById("todo");
     const status = document.getElementById("status");
 
-    inputForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const inputFormData = new FormData(inputForm);
+    document.addEventListener("submit", (event) => {
 
         fetch(`http://localhost:3000/tasks`, {
             method:'PUT',
@@ -47,4 +58,9 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     });
 
+}
+    
+document.addEventListener("DOMContentLoaded", () => {
+    indexTasks();
+    updateTask();
 });

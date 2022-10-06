@@ -4,28 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <script src="script.js"></script>
-    <title>Change Task</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="main.js"></script>
+    <title>Overview</title>
 </head>
 <body>
     <ul>
-        <li><a href="../index.html">Home</a></li>
+        <li><a href="">Home</a></li>
         <li><a href="delete Tasks/index.html">Delete</a></li>
-        <li><a href="../update Tasks/index.html">Update</a></li>
-        <li><a href="../Login/login.html">Login</a></li>
+        <li><a href="update Tasks/index.html">Update</a></li>
+        <li><a href="Login/login.html">Login</a></li>
       </ul>
-      <div class="container">
-        <h1>Update ToDo</h1>
+    <div class="container">
+        <h1>To do Liste</h1>
         <div class="wrapper">
             <form id="input" autocomplete="off">
                 <div id="left">
-                    <h2>Update</h2>
+                    <h2>Create New</h2>
                     <div class="labels">
                         <label for="id">ID</label><br>
                         <label for="todo">ToDo</label><br>
                         <label for="status">Status</label><br>
-                        <button type="submit" id="update">Update</button>
+                        <button type="submit" id="submit">Add</button>
                     </div>
                     <div class="inputs">
                         <input type="text" name="id" id="id" class="input" placeholder="ID will be generated"><br>
@@ -37,15 +37,18 @@
                     </div>
                 </div>
                 <div id="right">
+
                 </div>
             </form>
         </div>
+
         <table id="tableForm">
             <thead>
                 <tr>
-                    <th style="width: 10%;">ID</th>
-                    <th style="width: 70%;">Title</th>
-                    <th style="width: 20%;">Completed</th>
+                    <th class="id" style="width: 10%;">ID</th>
+                    <th class="title" style="width: 70%;">Title</th>
+                    <th class="status" style="width: 10%;">Status</th>
+                    <th class="delete" style="width: 10%;">Delete</th>
                 </tr>
             </thead>
         <tbody id="display">
@@ -53,5 +56,6 @@
         </tbody>
     </table>
     </div>
+    
 </body>
 </html>

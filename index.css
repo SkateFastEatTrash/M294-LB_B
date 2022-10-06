@@ -1,0 +1,121 @@
+/*
+    CSS by Tags
+*/
+body{
+    color: #f8f9fa;
+    height: auto;
+    background-color: #212529;
+}
+h1{
+    text-align: center;
+}
+label{
+    font-size: large;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+th{
+    border: #6c757d;
+    border-bottom: #212529;
+    border-style: solid;
+}
+td{
+    background-color: #495057;
+    border-radius: 10px;
+    height: 30px;
+
+}  
+button{
+    background-color: red;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .active {
+    background-color: #04AA6D;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #111;
+  }
+/*
+    CSS by Class Name
+*/
+.container{
+    width: 80%;
+    height: 800px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 20px;
+    background-color: #6c757d;
+}
+.wrapper{
+    height: 25%;
+    float: top;
+
+}
+
+
+.labels{
+    width: 20%;
+    float: left;
+    margin-left: 10%;
+}
+.inputs{
+    width: 20;
+    float: left;
+}
+
+.input{
+    border-radius: 5px;
+    border-style: none;
+    height: 25px;
+    margin-top: 2px;
+}
+
+/*
+    CSS by Ids
+*/
+#left{
+    width: 50%;
+    float: left;
+
+}
+#right{
+    width: 50%;
+    float: right;
+
+}
+#submit{
+    background-color: white;
+    height: 100%;
+    width: 50%;
+    border-radius: 25px;
+    border: none;
+    
+}
+#tableForm{
+    width: 100%;
+}

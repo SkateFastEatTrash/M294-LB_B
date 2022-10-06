@@ -4,24 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="main.css">
     <script src="index.js"></script>
     <title>Delete Task</title>
 </head>
 <body>
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="delete Tasks/index.html">Delete</a></li>
+        <li><a href="../update Tasks/index.html">Update</a></li>
+        <li><a href="../Login/login.html">Login</a></li>
+      </ul>
     <div class="container">
-        <h1>Delete Task</h1>
-        <form id="input">
-            <label for="id">ID</label>
-            <input type="text" name="id" id="id"><br>
-            <button type="submit" id="submit">Delete</button>
-        </form>
-        <table>
+        <h1>Delete ToDo</h1>
+        <div class="wrapper">
+            <form id="input" autocomplete="off">
+                <div id="left">
+                    <h2>Delete</h2>
+                    <div class="labels">
+                        <label for="id">ID</label><br>
+                        <button type="submit" id="delete">delete</button>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="id" id="id" class="input" placeholder="Please Enter ID here:"><br>
+                    </div>
+                </div>
+                <div id="right">
+                </div>
+            </form>
+        </div>
+        <table id="tableForm">
             <thead>
                 <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Completed</th>
+                    <th style="width: 10%;">ID</th>
+                    <th style="width: 70%;">Title</th>
+                    <th style="width: 20%;">Completed</th>
                 </tr>
             </thead>
         <tbody id="display">
