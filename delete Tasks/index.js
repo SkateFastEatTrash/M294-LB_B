@@ -27,12 +27,12 @@ function deleteTask () {
                 'Content-Type' : 'application/json'
             }
         })
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                renderTask(data)
-            })
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) => {
+            renderTask(data)
+        })
     });
 }
     
