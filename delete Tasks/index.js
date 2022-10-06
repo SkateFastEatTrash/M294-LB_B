@@ -6,26 +6,33 @@ function createCell(text) {
 }
 const renderTask = (task) =>  {    
 
-    for(let i = 0; i <= task.length - 1; i++) {
-        const tableBody = document.getElementById('display');
-        const tableRow = document.createElement('tr');
-        tableRow.append(createCell(task[i].id)),
-        tableRow.append(createCell(task[i].title)),
-        tableRow.append(createCell(task[i].completed));
-        tableBody.appendChild(tableRow);
-    }
+    const tableBody = document.getElementById('display');
+    const tableRow = document.createElement('tr');
+    tableRow.append(createCell(task.id));
+    tableRow.append(createCell(task.title));
+    tableRow.append(createCell(task.completed));
+    tableBody.appendChild(tableRow);
     
-    
-}   
-
-function indexTasks() {
-    fetch('http://localhost:3000/tasks')
-    .then((response) => response.json())
-    .then((data) => renderTask(data))
 }
-
-
+    
 document.addEventListener("DOMContentLoaded", () => {
+    const inputForm = document.getElementById("input");
 
-    indexTasks();
-})
+    inputForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const inputFormData = new FormData(inputForm);
+
+        fetch(`http://localhost:3000/task/${inputFormData.get("id")}`,{
+            method:'DELETE',
+            headers: {
+                'Content-Type' : 'application/json'
+            }
+        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                renderTask(data)
+            })
+    });
+});
