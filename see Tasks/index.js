@@ -4,15 +4,18 @@ function createCell(text) {
     cell.innerText = text;
     return cell;
 }
-function renderTask(task) {    
-    const tableBody = document.querySelector('tbody');
-    task.forEach((task) => {
-        const tableRow = document.createElement('td');
-        tableRow.append(createCell(task.id)),
-        tableRow.append(createCell(task.title)),
-        tableRow.append(createCell(task.completed));
+const renderTask = (task) =>  {    
+
+    for(let i = 0; i <= task.length - 1; i++) {
+        const tableBody = document.getElementById('display');
+        const tableRow = document.createElement('tr');
+        tableRow.append(createCell(task[i].id)),
+        tableRow.append(createCell(task[i].title)),
+        tableRow.append(createCell(task[i].completed));
         tableBody.appendChild(tableRow);
-    })
+    }
+    
+    
 }   
 
 function indexTasks() {
