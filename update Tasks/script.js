@@ -45,9 +45,6 @@ document.addEventListener("DOMContentLoaded", () => {
         .then((data) => {
             renderTask(data)
         })
-        alert(_idInput.value);
-        alert(todoInput.value);
-        alert(status.value);
     });
 
 });
