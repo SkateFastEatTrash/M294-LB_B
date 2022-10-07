@@ -26,6 +26,7 @@ ul {
     color: #f8f9fa;
     height: auto;
     background-color: #212529;
+    font-size: large;
 }
 h1{
     text-align: center;
@@ -34,12 +35,16 @@ th{
     border: #6c757d;
     border-bottom: #212529;
     border-style: solid;
+    background-color: #6c757d;
 }
-td{
+tr{
     background-color: #495057;
     border-radius: 10px;
     height: 30px;
 }  
+li a:hover {
+    background-color: #111;
+  }
 /*
     CSS by Class Name
 */
@@ -55,8 +60,6 @@ td{
 .wrapper{
     height: 25%;
     float: top;
-
-
 }
 .labels{
     width: 20%;
@@ -70,7 +73,7 @@ td{
 .input{
     border-radius: 5px;
     border-style: none;
-    height: 25px;
+    height: 20px;
     margin-top: 2px;
 }
 input:focus, textarea:focus, select:focus{
@@ -101,7 +104,11 @@ input:focus, textarea:focus, select:focus{
 #update{
     background-color: white;
     height: 100%;
-    width: 50%;
-    border-radius: 25px;
+    width: 100%;
+    border-radius: 5px;
     border: none;
+}
+#update:hover{
+    background-color: green;
+    color: white;
 }
