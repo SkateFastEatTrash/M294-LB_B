@@ -37,15 +37,18 @@ ul {
     padding: 14px 16px;
     text-decoration: none;
   }
-  .active {
+img{
+    margin-bottom: -36px;
+}
+/*
+    CSS by Class Name
+*/
+.active {
     background-color: #04AA6D;
   }
   li a:hover {
     background-color: #111;
   }
-/*
-    CSS by Class Name
-*/
 .container{
     width: 80%;
     height: 800px;
