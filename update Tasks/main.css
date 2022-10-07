@@ -45,6 +45,9 @@ tr{
 li a:hover {
     background-color: #111;
   }
+  img{
+    margin-bottom: -15px;
+  }
 /*
     CSS by Class Name
 */
