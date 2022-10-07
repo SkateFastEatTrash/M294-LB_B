@@ -25,7 +25,6 @@
                         <label for="id">ID</label><br>
                         <label for="todo">ToDo</label><br>
                         <label for="status">Status</label><br>
-                        <button type="submit" id="submit">Add</button>
                     </div>
                     <div class="inputs">
                         <input type="text" name="id" id="id" class="input" placeholder="ID will be generated"><br>
@@ -34,6 +33,7 @@
                             <option value="false">Not Completed</option>
                             <option value="true">Completed</option>
                         </select><br>
+                        <button type="submit" id="submit">Add</button>
                     </div>
                 </div>
                 <div id="right">
@@ -48,7 +48,8 @@
                     <th class="id" style="width: 10%;">ID</th>
                     <th class="title" style="width: 70%;">Title</th>
                     <th class="status" style="width: 10%;">Status</th>
-                    <th class="delete" style="width: 10%;">Delete</th>
+                    <th class="delete" style="width: 10">Delete</th>
+                    <th class="update" style="width: 10">Update</th>
                 </tr>
             </thead>
         <tbody id="display">

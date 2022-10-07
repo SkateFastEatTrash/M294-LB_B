@@ -19,19 +19,15 @@ th{
     border: #6c757d;
     border-bottom: #212529;
     border-style: solid;
+    background-color: #6c757d;
 }
-td{
+tr{
     background-color: #495057;
     border-radius: 10px;
     height: 30px;
 
-}  
-button{
-    background-color: red;
-    height: 100%;
-    width: 100%;
-    border-radius: 5px;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -91,7 +87,7 @@ ul {
 .input{
     border-radius: 5px;
     border-style: none;
-    height: 25px;
+    height: 20px;
     margin-top: 2px;
 }
 
@@ -111,11 +107,38 @@ ul {
 #submit{
     background-color: white;
     height: 100%;
-    width: 50%;
-    border-radius: 25px;
+    width: 100%;
+    border-radius: 5px;
     border: none;
-    
+}
+#submit:hover{    
+    background-color: green;
+    color: white;
 }
 #tableForm{
     width: 100%;
+}
+#delete{
+    background-color: #495057;
+    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+#delete:hover{
+    background-color: red;
+    color: white;
+    border: none
+}
+#update{
+    background-color: #495057;
+    border: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px; 
+}
+#update:hover{
+    background-color: orange;
+    color: black;
+    border: none;
 }
