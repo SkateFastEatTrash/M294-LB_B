@@ -91,6 +91,14 @@ function checkLogged() {
     })
 }
 
+function logOut (){
+    fetch("http://127.0.0.1:3000/auth/cookie/logout", {
+        method: 'POST',
+        credentials: "include",
+    })
+    location.reload();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
     const _idInput = document.getElementById("id");
     const todoInput = document.getElementById("todo");

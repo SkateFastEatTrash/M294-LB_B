@@ -148,3 +148,12 @@ ul {
     color: black;
     border: none;
 }
+#logout{
+    background-color: #21252900;
+    border: none;
+    color: white;
+}
+#logout:hover{
+    background-color: red;
+    color: white
+}
