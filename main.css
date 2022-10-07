@@ -96,6 +96,13 @@ ul {
 .hidden {
     display: none;
 }
+.login{
+    margin-left: 25%;
+    margin-top: 25%;
+    height: 10%;
+    width: 50%;
+
+}
 
 /*
     CSS by Ids
