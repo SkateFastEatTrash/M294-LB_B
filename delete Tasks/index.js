@@ -20,8 +20,9 @@ function deleteTask () {
     inputForm.addEventListener("submit", (event) => {
         const inputFormData = new FormData(inputForm);
 
-        fetch(`http://localhost:3000/task/${inputFormData.get("id")}`,{
+        fetch(`http://127.0.0.1:3000/auth/cookie/task/${inputFormData.get("id")}`,{
             method:'DELETE',
+            credentials: "include",
             headers: {
                 'Content-Type' : 'application/json'
             }
@@ -56,7 +57,9 @@ const renderTaskForIndex = (task) =>  {
     
 }   
 function indexTasks() {
-    fetch('http://localhost:3000/tasks')
+    fetch('http://127.0.0.1:3000/auth/cookie/tasks', {
+        credentials: "include"
+    })
     .then((response) => response.json())
     .then((data) => renderTaskForIndex(data))
 }

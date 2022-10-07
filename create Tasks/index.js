@@ -1,6 +1,7 @@
 function createTask(task) {
-    fetch('http://localhost:3000/tasks',{
+    fetch('http://127.0.0.1:3000/auth/cookie/tasks',{
         method: 'POST',
+        credentials: "include",
         headers: {
             'Content-Type' : 'application/json'
         },
@@ -27,7 +28,9 @@ const renderTask = (task) =>  {
     
 }   
 function indexTasks() {
-    fetch('http://localhost:3000/tasks')
+    fetch('http://127.0.0.1:3000/auth/cookie/tasks', {
+        credentials: "include"
+    })
     .then((response) => response.json())
     .then((data) => renderTask(data))
 }
