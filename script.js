@@ -58,8 +58,8 @@ const renderTask = (task) =>  {
         tableRow.append(createCell(task[i].id)),
         tableRow.append(createCell(task[i].title)),
         tableRow.append(createCell(task[i].completed));
-        tableRow.append(createCell(`<button id="delete" type="button" onClick="deleteTask(${task[i].id})">Delete</button>`))
-        tableRow.append(createCell(`<button id="update" type="button" onClick="updateTask(${task[i].id})">Update</button>`))
+        tableRow.append(createCell(`<button id="delete" type="button" onClick="deleteTask(${task[i].id})">Delete</button>`));
+        tableRow.append(createCell(`<button id="update" type="button" onClick="updateTask(${task[i].id})">Update</button>`));
         tableBody.appendChild(tableRow);
     }
     
