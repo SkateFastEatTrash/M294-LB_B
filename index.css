@@ -90,6 +90,9 @@ ul {
     height: 20px;
     margin-top: 2px;
 }
+.hidden {
+    display: none;
+}
 
 /*
     CSS by Ids

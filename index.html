@@ -9,53 +9,65 @@
     <title>Overview</title>
 </head>
 <body>
-    <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="delete Tasks/index.html">Delete</a></li>
-        <li><a href="update Tasks/index.html">Update</a></li>
-        <li><a href="Login/login.html">Login</a></li>
-      </ul>
-    <div class="container">
-        <h1>To do Liste</h1>
-        <div class="wrapper">
-            <form id="input" autocomplete="off">
-                <div id="left">
-                    <h2>Create New</h2>
-                    <div class="labels">
-                        <label for="id">ID</label><br>
-                        <label for="todo">ToDo</label><br>
-                        <label for="status">Status</label><br>
+    <div id="loggedIn" class="hidden">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="delete Tasks/index.html">Delete</a></li>
+            <li><a href="update Tasks/index.html">Update</a></li>
+            <li><a href="Login/login.html">Login</a></li>
+        </ul>
+        <div class="container">
+            <h1>To do Liste</h1>
+            <div class="wrapper">
+                <form id="input" autocomplete="off">
+                    <div id="left">
+                        <h2>Create New</h2>
+                        <div class="labels">
+                            <label for="id">ID</label><br>
+                            <label for="todo">ToDo</label><br>
+                            <label for="status">Status</label><br>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" name="id" id="id" class="input" placeholder="ID will be generated"><br>
+                            <input type="text" name="todo" id="todo" class="input" placeholder="Enter ToDo here:"><br>
+                            <select name="status" id="status" class="input">
+                                <option value="false">Not Completed</option>
+                                <option value="true">Completed</option>
+                            </select><br>
+                            <button type="submit" id="submit">Add</button>
+                        </div>
                     </div>
-                    <div class="inputs">
-                        <input type="text" name="id" id="id" class="input" placeholder="ID will be generated"><br>
-                        <input type="text" name="todo" id="todo" class="input" placeholder="Enter ToDo here:"><br>
-                        <select name="status" id="status" class="input">
-                            <option value="false">Not Completed</option>
-                            <option value="true">Completed</option>
-                        </select><br>
-                        <button type="submit" id="submit">Add</button>
-                    </div>
-                </div>
-                <div id="right">
+                    <div id="right">
 
-                </div>
-            </form>
+                    </div>
+                </form>
+            </div>
+
+            <table id="tableForm">
+                <thead>
+                    <tr>
+                        <th class="id" style="width: 10%;">ID</th>
+                        <th class="title" style="width: 70%;">Title</th>
+                        <th class="status" style="width: 10%;">Status</th>
+                        <th class="delete" style="width: 10">Delete</th>
+                        <th class="update" style="width: 10">Update</th>
+                    </tr>
+                </thead>
+            <tbody id="display">
+        
+            </tbody>
+        </table>
         </div>
+    </div>
+    <div id="notLoggedIn" class="hidden">
+        <form id="login">
+            <label for="email_input">Email</label>
+            <input type="email" name="email" id="email_input">
+            <label for="password_input">Password</label>
+            <input type="password" name="password" id="password_input">
 
-        <table id="tableForm">
-            <thead>
-                <tr>
-                    <th class="id" style="width: 10%;">ID</th>
-                    <th class="title" style="width: 70%;">Title</th>
-                    <th class="status" style="width: 10%;">Status</th>
-                    <th class="delete" style="width: 10">Delete</th>
-                    <th class="update" style="width: 10">Update</th>
-                </tr>
-            </thead>
-        <tbody id="display">
-    
-        </tbody>
-    </table>
+            <button type="submit">Login</button>
+        </form>
     </div>
     
 </body>
