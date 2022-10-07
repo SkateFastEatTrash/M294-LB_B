@@ -6,37 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main.css">
     <script src="index.js"></script>
-    <title>To Do</title>
+    <title>Search</title>
 </head>
 <body>
-    <div class="container">
-        <h1>To do Liste</h1>
-        <form id="inputForm">
-            <label for="id">ID</label>
-            <input type="text" name="id" id="id" class="input"><br>
+    <div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="../delete Tasks/index.html">Delete</a></li>
+            <li><a href="../update Tasks/index.html">Update</a></li>
+            <li><a href="../see Tasks/index.html">Search</a></li>
+        </ul>
+        <div class="container">
+            <div id="title">
+            <h1>Search by ID</h1>
+            </div>
+            <div class="wrapper">
+                <form id="input" autocomplete="off">
+                    <div id="left">
+                        <h2>Search by ID</h2>
+                        <div class="labels">
+                            <label for="id">ID</label><br>
+                        </div>
+                        <div class="inputs">
+                            <input type="text" name="id" id="id" class="input" placeholder="Please enter ID:"><br>
+                            <button type="submit" id="search">Search</button>
+                        </div>
+                    </div>
+                    <div id="right">
 
-            <label for="todo">ToDo</label>
-            <input type="text" name="todo" id="todo" class="input"><br>
+                    </div>
+                </form>
+            </div>
 
-            <label for="status">Status</label>
-            <select name="status" id="status" class="input">
-                <option value="true">Completed</option>
-                <option value="false">Not Completed</option>
-            </select><br>
-            <button type="submit" id="submit">Reload</button>
-        </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Completed</th>
-                </tr>
-            </thead>
-        <tbody id="display">
-    
-        </tbody>
-    </table>
+            <table id="tableForm">
+                <thead>
+                    <tr>
+                        <th class="id" style="width: 10%;">ID</th>
+                        <th class="title" style="width: 70%;">Title</th>
+                        <th class="status" style="width: 10%;">Status</th>
+                        <th class="delete" style="width: 10">Delete</th>
+                        <th class="update" style="width: 10">Update</th>
+                    </tr>
+                </thead>
+            <tbody id="display">
+        
+            </tbody>
+        </table>
+        </div>
     </div>
+
 </body>
 </html>
